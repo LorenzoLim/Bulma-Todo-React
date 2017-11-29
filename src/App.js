@@ -45,7 +45,7 @@ class App extends Component {
     console.log(tasks.reverse())
     return (
       <div className="App">
-        <Header totalTasks={this.state.tasks.length} title="INCOMPLETE" />
+        <Header totalTasks={this.state.tasks.length} title="COMPLETE" />
         <form onSubmit={this.addTask}>
           <Input danger large
           placeholder="search / add a todo!"
