@@ -48,7 +48,7 @@ class App extends Component {
         <Header totalTasks={this.state.tasks.length} title="COMPLETE" />
         <form onSubmit={this.addTask}>
           <Input danger large
-          placeholder="search / add a Task!"
+          placeholder="search / add a Task!!"
           value={ searchPhrase }
           onChange={ this.onChangeQuery }/><br />
         </form>
