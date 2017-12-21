@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/Header'
 import { Input, Hero } from 'reactbulma';
+import Header from './components/Header';
 import './App.css';
 
 let currentId = 50;
@@ -9,8 +9,8 @@ const genId = () => currentId++;
 class App extends Component {
   state = {
     tasks: [
-      { id: 0, name: 'Do the washing', complete: false, date: Date() },
-      { id: 1, name: 'Walk the dog', complete: false, date: Date.toLocaleString() }
+      { id: 0, name: 'Do the washing', complete: false, date: new Date() },
+      { id: 1, name: 'Walk the dog', complete: false, date: new Date() }
     ],
     searchPhrase: ''
   }
@@ -56,7 +56,7 @@ class App extends Component {
           tasks
           .filter(myTask => myTask.name.includes(searchPhrase))
           .reverse()
-          .map(myTask => <Hero primary key={myTask.id}>{ myTask.name }<br />{ myTask.date }</Hero>)
+          .map(myTask => <Hero primary key={myTask.id}>{ myTask.name }<br />{ myTask.date.toLocaleString() }</Hero>)
         }
       </div>
     );
