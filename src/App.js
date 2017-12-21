@@ -39,7 +39,7 @@ class App extends Component {
       })
     }
   }
-  
+
   render() {
     const { tasks, searchPhrase } = this.state
     console.log(tasks.reverse())
