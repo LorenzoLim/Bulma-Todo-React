@@ -5,7 +5,7 @@ import './App.css';
 
 let currentId = 50;
 const genId = () => currentId++;
-
+ 
 class App extends Component {
   state = {
     tasks: [
